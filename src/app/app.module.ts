@@ -11,6 +11,42 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { ProductSearchComponent } from './product-search/product-search.component';
 import { HttpClientModule  } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes=[
+
+  {
+    path:"",
+    component:AdminLoginComponent
+  },
+
+  {
+    path:"userregistration",
+    component:UserRegistrationComponent
+  },
+
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"add",
+    component:ProductAddComponent
+  },
+
+  {
+    path:"view",
+    component:ProductViewComponent
+  },
+
+  {
+    path:"search",
+    component:ProductSearchComponent
+  }
+
+  
+]
 
 @NgModule({
   declarations: [
@@ -20,13 +56,15 @@ import { HttpClientModule  } from '@angular/common/http';
     UserRegistrationComponent,
     ProductAddComponent,
     ProductViewComponent,
-    ProductSearchComponent
+    ProductSearchComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forChild(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
