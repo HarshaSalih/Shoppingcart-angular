@@ -13,6 +13,7 @@ import { ProductSearchComponent } from './product-search/product-search.componen
 import { HttpClientModule  } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { UserSearchComponent } from './user-search/user-search.component';
 
 const myRoute:Routes=[
 
@@ -43,6 +44,11 @@ const myRoute:Routes=[
   {
     path:"search",
     component:ProductSearchComponent
+  },
+
+  {
+    path:"usersearch",
+    component:UserSearchComponent
   }
 
   
@@ -57,7 +63,8 @@ const myRoute:Routes=[
     ProductAddComponent,
     ProductViewComponent,
     ProductSearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    UserSearchComponent
   ],
   imports: [
     BrowserModule,
