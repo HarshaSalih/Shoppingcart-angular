@@ -14,6 +14,7 @@ import { HttpClientModule  } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserSearchComponent } from './user-search/user-search.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 
 const myRoute:Routes=[
 
@@ -64,7 +65,8 @@ const myRoute:Routes=[
     ProductViewComponent,
     ProductSearchComponent,
     NavbarComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,
