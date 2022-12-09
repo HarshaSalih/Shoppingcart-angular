@@ -15,6 +15,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 const myRoute:Routes=[
 
@@ -50,6 +51,10 @@ const myRoute:Routes=[
   {
     path:"usersearch",
     component:UserSearchComponent
+  },
+  {
+    path:"viewprofile",
+    component:ViewProfileComponent
   }
 
   
@@ -66,7 +71,8 @@ const myRoute:Routes=[
     ProductSearchComponent,
     NavbarComponent,
     UserSearchComponent,
-    UserNavbarComponent
+    UserNavbarComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,
