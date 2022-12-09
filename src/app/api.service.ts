@@ -28,4 +28,15 @@ export class ApiService {
   {
     return this.http.post("http://localhost:8080/userregistration",dataToSend)
   }
+
+  userLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/userlogin",dataToSend)
+  }
+
+  getProfileDetails=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/viewprofile",dataToSend)
+  }
+  
 }
