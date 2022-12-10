@@ -14,36 +14,23 @@ export class UserLoginComponent {
   
 
   constructor(private api:ApiService,private route:Router){}
-  // constructor(private route:Router){}
+  
 
   readValues=()=>
   {
     let data:any={"email":this.email,"password":this.password}
-    // console.log(data)
-
-    // if (this.email=="email123" && this.password=="1234") {
-    //   alert("Valid login")
-    //   this.route.navigate(['/usersearch'])
-      
-    // } else {
-    //   alert("Invalid credential")
-      
-    // }
-   this.api.userLogin(data).subscribe(
+    this.api.userLogin(data).subscribe(
     (response:any)=>
     {
-      this.email=""
-      this.password=""
       if(response.status=="success")
       {
-        let userId=response.userId
-        console.log(userId)
-        localStorage.setItem("userInfo",userId)
+        
+        localStorage.setItem("userInfo",response.userId)
         this.route.navigate(["/viewprofile"])
       }
       else
       {
-        alert(response.message)
+        alert("login failed")
       }
     }
    )
